@@ -16,7 +16,7 @@ export default function HelloCard() {
           <img
             src="/earth.gif"
             alt="Earth"
-            className="w-[31vh] h-[31vh] object-cover rounded-full absolute bottom-[0vh] right-[1vw]"
+            className="w-[29vh] h-[29vh] object-cover rounded-full absolute bottom-[1vh] right-[1vw]"
           />
         </div>
 
