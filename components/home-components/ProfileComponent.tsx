@@ -39,7 +39,7 @@ export default function ProfileComponent() {
     </button>
   </Link>
 
-  <Link href="/services">
+  <Link href="/skills">
     <button
       className=" absolute bottom-[10vh] left-[30vw]
         bg-black

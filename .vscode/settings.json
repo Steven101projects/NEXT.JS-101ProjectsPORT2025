@@ -1,0 +1,11 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "src/components/projects-components",
+            "color": "#00000"
+        },
+        {
+            "folderPath": "nicoport\\app\\"
+        }
+    ]
+}

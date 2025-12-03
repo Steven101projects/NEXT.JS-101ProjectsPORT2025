@@ -30,6 +30,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "components/skills-components/MessageBox.jsx"  ],
   "exclude": ["node_modules"]
 }
