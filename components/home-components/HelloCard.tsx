@@ -5,7 +5,7 @@ export default function HelloCard() {
         className="
           absolute top-[21vh] right-[3vw] w-[49vw] h-[50vh] 
           bg-white border-2 border-black rounded-4xl pl-4 flex flex-col 
-          shadow-xl asfalt
+          shadow-md asfalt
         "
       >
         <div className="flex">
@@ -28,9 +28,12 @@ export default function HelloCard() {
         </p>
       </div>
 
-      <p className="absolute bottom-[24vh] right-[4vw] text-lg text-black">
-        Copyright © 2025 Nico Castro. All rights reserved.
+      <p className="absolute bottom-[24vh] right-[4vw] text-xl text-black">
+              -- Full Stack Developer - Software Design Engineer - Graphic Specialist - Instructor. --
       </p>
+      <p className="absolute bottom-[20vh] right-[4vw] text-lg text-black">Copyright © 2025
+Nico Castro.
+All rights reserved.</p>
     </div>
   );
 }
