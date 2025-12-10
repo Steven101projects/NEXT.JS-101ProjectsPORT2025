@@ -5,6 +5,7 @@ import { ViewAllProjects, RecentProjects } from "@/components/projects-component
 import ScrollToTopButton from "@/components/GoBackButton";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Footer from "@/components/footers"
 
 /* eslint-disable react/no-unescaped-entities */
 export default function Projects() {
@@ -79,6 +80,7 @@ export default function Projects() {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

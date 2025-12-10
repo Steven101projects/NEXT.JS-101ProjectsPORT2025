@@ -21,7 +21,7 @@ export default function HelloCard() {
         </div>
 
         <p className="relative bottom-[5vh] text-[4vh] text-[#222222] ml-1 italic leading-snug">
-          I am a creative who loves problem solving <br />
+          I am an engineer who loves problem solving <br />
           and thinking critically. <br /> Man..
           living in this world is hard,<br />
           so let us make it easier together!

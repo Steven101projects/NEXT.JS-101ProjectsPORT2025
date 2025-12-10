@@ -104,7 +104,7 @@ function ProjectsHeader(){
         </Link>
         <span>|</span>
         <Link
-          href="/services"
+          href="/skills"
           className="hover:underline hover:font-semibold transition-all duration-300"
         >
           Skills
