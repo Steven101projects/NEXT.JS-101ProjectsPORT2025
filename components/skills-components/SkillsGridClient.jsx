@@ -7,7 +7,7 @@ export default function ServicesGridClient({ services }) {
   return (
     <>
       {/* Service Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-[70px] justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-[70px] my-7 justify-items-center">
         {services.map((service) => (
           <div
   key={service.id}
