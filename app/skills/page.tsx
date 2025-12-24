@@ -8,9 +8,8 @@ import Footer from "@/components/footers"
 export default function Skills(){
     return (
         <>
-        <div>
         <Header page="skills" />
-        </div>
+        <div className="mt-[12vh]"></div>
         <MessageBox />
         <SkillsGrid />
         <Footer />

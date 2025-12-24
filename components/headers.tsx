@@ -48,7 +48,7 @@ function HomeHeader(){
 function SkillsHeader(){
  return (
     <>
-    <header className="flex justify-between items-center mt-[8px] pr-[60px]">
+    <header className="bg-white w-full fixed top-0 z-50 flex justify-between items-center pr-[60px]">
       {/* Left side title */}
       <Link href="/" className="px-2 py-1 text-8xl">
         1O1~
@@ -82,7 +82,6 @@ function SkillsHeader(){
         <p className="px-2 py-1 text-7xl">SKILLS</p>
       </div>
     </header>
-  <hr className="border-gray-300 mb-3 w-10/12 ml-52" />
     </>
  )
 }

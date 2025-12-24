@@ -3,15 +3,23 @@ import { useState } from "react";
 
 export default function ServicesGridClient({ services }) {
   const [selectedService, setSelectedService] = useState(null);
+  const [showHint, setShowHint] = useState(false);
 
   return (
     <>
+    {showHint && (
+  <div className="fixed top-6 right-6 z-50 bg-black text-white px-6 py-4 rounded-xl shadow-lg">
+    Press the Message Icon to send a message!
+  </div>
+)}
+
       {/* Service Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-[70px] my-7 justify-items-center">
         {services.map((service) => (
           <div
   key={service.id}
   className="
+    relative z-0
     flex flex-col bg-white border-black border rounded-[28px]
     p-6 text-center shadow-sm overflow-hidden
     transition-all duration-300
@@ -105,14 +113,20 @@ export default function ServicesGridClient({ services }) {
 
 
       {/* Bottom button aligned right */}
-      <div className="w-full flex justify-end mt-8">
-        <button
-          onClick={() => setSelectedService(null)}
-          className="px-8 py-3 bg-white border border-black rounded-full text-lg hover:bg-black hover:text-white transition"
-        >
-          Let’s Talk!
-        </button>
-      </div>
+<div className="w-full flex justify-end mt-8">
+  <button
+    onClick={() => {
+      setSelectedService(null);      // close the modal
+      setShowHint(true);             // show hint
+      setTimeout(() => setShowHint(false), 3000);
+    }}
+    className="px-8 py-3 bg-white border border-black rounded-full text-lg hover:bg-black hover:text-white transition"
+  >
+    Let’s Talk!
+  </button>
+</div>
+
+
     </div>
   </div>
 )}

@@ -22,7 +22,7 @@ export function RecentProjects({ setShowAll }: ProjectProps) {
     <p className="text-[12vh] italic tracking-wide text-black mb-3">
       RECENT PROJECTS
     </p>
-    <Link href="/blogs" className="hover:text-blue-800 transition-colors underline italic">
+    <Link href="https://nicnotes.netlify.app/blog" className="hover:text-blue-800 transition-colors underline italic">
       Blogs
     </Link>
   </div>
