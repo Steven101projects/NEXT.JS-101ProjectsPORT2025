@@ -4,17 +4,18 @@ export default function ExternalLinks() {
   return (
     <div
       className="
-        absolute 
-        top-[17vh] 
-        right-[68vw] 
-        w-[520px] 
-        h-[520px] 
+        externalLinks
+        absolute
+        top-[17vh]
+        right-[68vw]
+        w-[520px]
+        h-[520px]
         pointer-events-none
       "
     >
       <svg
         viewBox="0 0 470 460"
-        className="w-full h-full fill-black text-[22px]"
+        className="externalLinksSvg w-full h-full fill-black text-[22px]"
         style={{ pointerEvents: "none" }}
       >
         <defs>
@@ -26,7 +27,7 @@ export default function ExternalLinks() {
 
         <text
           textAnchor="middle"
-          className="tracking-wide"
+          className="externalLinksText tracking-wide"
           style={{ pointerEvents: "auto" }}
         >
           <textPath
@@ -34,11 +35,10 @@ export default function ExternalLinks() {
             startOffset="60%"
             style={{ pointerEvents: "auto" }}
           >
-
             <a
               href="mailto:castroconi101@gmail.com"
+              className="externalLinksItem cursor-pointer hover:underline"
               style={{ pointerEvents: "auto" }}
-              className="cursor-pointer hover:underline"
             >
               Email
             </a>
@@ -48,8 +48,8 @@ export default function ExternalLinks() {
             <a
               href="https://www.linkedin.com/in/nico-steven-castro-5a5285332/"
               target="_blank"
+              className="externalLinksItem cursor-pointer hover:underline"
               style={{ pointerEvents: "auto" }}
-              className="cursor-pointer hover:underline"
             >
               LinkedIn
             </a>
@@ -59,8 +59,8 @@ export default function ExternalLinks() {
             <a
               href="https://github.com/Steven101projects"
               target="_blank"
+              className="externalLinksItem cursor-pointer hover:underline"
               style={{ pointerEvents: "auto" }}
-              className="cursor-pointer hover:underline"
             >
               Github
             </a>
@@ -70,12 +70,11 @@ export default function ExternalLinks() {
             <a
               href="https://www.instagram.com/theultracheese_3/"
               target="_blank"
+              className="externalLinksItem cursor-pointer hover:underline"
               style={{ pointerEvents: "auto" }}
-              className="cursor-pointer hover:underline"
             >
               Instagram
             </a>
-
           </textPath>
         </text>
       </svg>
