@@ -10,7 +10,6 @@ import TitleHeader from "@/components/home-components/TitleHeader";
 
 export default function Home() {
   return (
-    <>
       <div
         className="bg-cover bg-center"
         style={{ backgroundImage: 'url("/arches.png")' }}
@@ -27,6 +26,5 @@ export default function Home() {
 
         <Header page="home" />
       </div>
-    </>
   );
 }

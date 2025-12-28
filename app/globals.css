@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
+html,
 body {
-  font-family:'Times New Roman', Times, serif;
-
+    font-family:'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
 }
 
 .circleImg {
@@ -153,16 +157,23 @@ body {
 }
 
 @media (max-width: 768px) {
-
   .homeRootLayout {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+    gap: 0;
   }
 
-  .homeRootLayout > section {
+  .homeRootLayout section {
+    margin: 0;
+    padding: 0;
     width: 100%;
   }
 }
+
 @media (max-width: 768px) {
 
   .profileContainer {

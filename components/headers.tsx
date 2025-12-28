@@ -4,7 +4,7 @@ import { JSX } from "react";
 function HomeHeader() {
   return (
     <>
-      <header className="portfolio-header flex justify-between items-center pr-[60px]">
+      <header className="portfolio-header flex justify-between items-center pr-[60px] mb-1.5">
         {/* Left side title */}
         <Link href="/" className="portfolio-logo px-2 py-1 text-8xl">
           1O1~
@@ -39,8 +39,6 @@ function HomeHeader() {
           <p className="portfolio-page-label px-2 py-1 text-7xl">HOME</p>
         </div>
       </header>
-
-      <hr className="portfolio-header-divider border-gray-300 mb-3 w-10/12 ml-52" />
     </>
   );
 }
