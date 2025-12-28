@@ -1,23 +1,33 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import projects from "@/app/data/projects";
 
 export default function ProjectCarousel3D() {
   const [position, setPosition] = useState(3);
   const [selected, setSelected] = useState(null);
+  const [isSmall, setIsSmall] = useState(false);
+
   const total = projects.length;
 
-  const CARD_W = 850;
-  const CARD_H = 450;
-  const GAP = 40;
-  const CTRLS_H = 100;
+  useEffect(() => {
+    const check = () => setIsSmall(window.innerWidth <= 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  // slightly smaller on mobile
+  const CARD_W = isSmall ? 360 : 850;
+  const CARD_H = isSmall ? 380 : 450;
+  const GAP = isSmall ? 20 : 40;
+  const CTRLS_H = 40;
 
   const moveLeft = () => setPosition((p) => (p > 1 ? p - 1 : total));
   const moveRight = () => setPosition((p) => (p < total ? p + 1 : 1));
 
   return (
     <>
-      {/* Main carousel */}
       <div className="relative w-full overflow-x-hidden select-none bg-white">
         <div
           className="relative w-full grid"
@@ -39,7 +49,7 @@ export default function ProjectCarousel3D() {
               width: "100%",
               height: `${CARD_H}px`,
               transformStyle: "preserve-3d",
-              perspective: "600px",
+              perspective: isSmall ? "380px" : "600px",
               "--items": total,
               "--middle": 3,
               "--position": position,
@@ -59,7 +69,7 @@ export default function ProjectCarousel3D() {
                   "--offset": i + 1,
                   "--r": `calc(var(--position) - var(--offset))`,
                   "--abs": `max(calc(var(--r) * -1), var(--r))`,
-                  transform: `rotateY(calc(-10deg * var(--r)))
+                  transform: `rotateY(calc(-6deg * var(--r)))
                               translateX(calc(-${CARD_W + GAP}px * var(--r)))`,
                   zIndex: `calc((var(--position) - var(--abs)))`,
                   pointerEvents: "auto",
@@ -73,12 +83,12 @@ export default function ProjectCarousel3D() {
                   />
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-full p-6 flex justify-between items-end">
+                <div className="absolute bottom-0 left-0 w-full p-5 flex justify-between items-end">
                   <div className="max-w-[70%] text-left">
-                    <h3 className="text-2xl font-semibold text-gray-900">
+                    <h3 className="text-xl font-semibold text-gray-900">
                       {p.title}
                     </h3>
-                    <p className="text-gray-700 mt-1 text-base">
+                    <p className="text-gray-700 mt-1 text-sm">
                       {p.description}
                     </p>
                   </div>
@@ -93,25 +103,22 @@ export default function ProjectCarousel3D() {
               <div
                 onClick={moveLeft}
                 className="w-1/2 h-full cursor-pointer bg-transparent hover:bg-gradient-to-r hover:from-black/10 hover:via-transparent hover:to-transparent transition-all duration-500 ease-in-out"
-                title="Previous"
               ></div>
 
               <div
                 onClick={moveRight}
                 className="w-1/2 h-full cursor-pointer bg-transparent hover:bg-gradient-to-l hover:from-black/10 hover:via-transparent hover:to-transparent transition-all duration-500 ease-in-out"
-                title="Next"
               ></div>
             </div>
           </main>
         </div>
       </div>
 
-      {/* Modal */}
       {selected && (
-<div
-  className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50"
-  onClick={() => setSelected(null)}
->
+        <div
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50"
+          onClick={() => setSelected(null)}
+        >
           <div
             className="bg-white rounded-xl shadow-xl p-8 max-w-3xl w-full relative"
             onClick={(e) => e.stopPropagation()}
