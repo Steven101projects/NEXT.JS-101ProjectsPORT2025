@@ -13,7 +13,7 @@ function HomeHeader() {
         {/* Right side content */}
         <div className="portfolio-header-right flex items-center justify-end space-x-10">
           {/* Navigation */}
-          <nav className="portfolio-nav flex items-center space-x-2 text-[23px]">
+          <nav className="portfolio-nav flex items-center space-x-2 text-2xl">
             <Link
               href="/skills"
               className="portfolio-nav-link hover:underline hover:font-semibold transition-all duration-300"

@@ -18,8 +18,8 @@ export default function ProjectCarousel3D() {
   }, []);
 
   // slightly smaller on mobile
-  const CARD_W = isSmall ? 360 : 850;
-  const CARD_H = isSmall ? 380 : 450;
+  const CARD_W = isSmall ? 220 : 850;
+  const CARD_H = isSmall ? 300 : 450;
   const GAP = isSmall ? 20 : 40;
   const CTRLS_H = 40;
 

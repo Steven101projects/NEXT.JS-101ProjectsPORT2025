@@ -22,7 +22,7 @@ export default function TitleCardPage() {
       </div>
 
       {/* Navigation */}
-      <nav className="text-lg sm:text-[2rem] space-x-1">
+      <nav className="titleNav text-3xl space-x-1">
         <span>|</span>
         <Link
           href="/home"

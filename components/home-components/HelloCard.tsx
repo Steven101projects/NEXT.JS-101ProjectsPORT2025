@@ -29,7 +29,7 @@ export default function HelloCard() {
         </p>
       </div>
 
-      <p className="helloCardFooterTitle absolute bottom-[24vh] right-[4vw] text-xl text-black">
+      <p className="helloCardFooterTitle absolute bottom-[24vh] right-[4vw] text-xl sm:text-lg text-black">
               -- Full Stack Developer - Software Design Engineer - Graphic Specialist - Instructor. --
       </p>
       <p className="helloCardFooterCopyright absolute bottom-[20vh] right-[4vw] text-lg text-black">

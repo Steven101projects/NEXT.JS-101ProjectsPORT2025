@@ -71,7 +71,7 @@ export default function Projects() {
 
           {/* Quote overlay */}
           <div className="absolute text-center text-white px-6">
-            <p className="text-[4vh] italic mb-2 drop-shadow-lg">
+            <p className="text-3xl italic mb-2 drop-shadow-lg">
               "{quote.text}"
             </p>
             <p className="text-[3vh] font-light drop-shadow-md">
