@@ -20,7 +20,7 @@ export default function ExpCenter() {
         hover:scale-105 active:scale-95
     "
 >
-                My experience...
+                Additional Details...
             </button>
 
             {/* Modal */}

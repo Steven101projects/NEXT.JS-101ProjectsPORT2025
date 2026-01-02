@@ -6,7 +6,7 @@ const services = [
       "design and create visual, interactive, and digital media experiences that communicate ideas clearly and effectively",
     image: "/services-img/fullstack.jpg",
     details:
-      "This service focuses on creating engaging visual content across digital platforms. It includes graphic design, motion visuals, layout design, and interactive media. The goal is to communicate ideas clearly through strong visuals while maintaining consistency with branding and audience expectations.",
+      "This service focuses on visual storytelling across digital platforms, including illustration, digital collage, video editing, and motion based content. It emphasizes strong composition, creative experimentation, and consistency in visual language to communicate ideas clearly and engage audiences."
   },
   {
     id: 2,
@@ -15,17 +15,17 @@ const services = [
       "build complete web applications by combining frontend interfaces with reliable backend systems",
     image: "/services-img/instructor.jpg",
     details:
-      "This service covers both client side and server side development using modern web technologies. It includes building responsive user interfaces, developing secure backend logic, managing databases, and connecting everything into a reliable and scalable application.",
+      "This service covers end to end web application development, including frontend interfaces, backend logic, database integration, and API connections. It focuses on clean structure, usability, and scalable implementation using modern development practices."
   },
   {
     id: 3,
-    title: "IOT Technician",
+    title: "Tech Lead",
     description:
-      "set up and support connected devices and smart systems for data collection and automation",
+      "guide technical teams through planning, collaboration, and execution of software projects",
     image: "/services-img/agility.jpg",
     details:
-      "This service focuses on configuring and supporting Internet of Things systems. It includes device setup, sensor integration, basic networking, data collection, and troubleshooting connected hardware to ensure systems operate reliably and efficiently.",
-  },
+      "This service focuses on technical leadership and team coordination. It includes guiding development workflows, supporting team members through mentoring and instruction, resolving technical blockers, and maintaining alignment between project goals, timelines, and implementation quality."
+  }
 ];
 
 export default services;

@@ -19,7 +19,7 @@ export default function Footer() {
         {/* Social Media Icons */}
         <div className="portfolioFooterSocial flex space-x-6">
           <a
-            href="https://www.linkedin.com/in/nico-castro/"
+            href="https://www.linkedin.com/in/nico-steven-castro-5a5285332/"
             target="_blank"
             rel="noopener noreferrer"
             className="portfolioFooterIcon text-yellow-600 hover:text-blue-700"
@@ -60,10 +60,10 @@ export default function Footer() {
         <span className="text-lg">
           Email{" "}
           <a
-            href="mailto:castroconi101s@gmail.com"
+            href="mailto:castroconi101@gmail.com"
             className="portfolioFooterLink text-yellow-600 hover:text-black hover:bg-white"
           >
-            castroconi101s@gmail.com
+            castroconi101@gmail.com
           </a>
         </span>
 
