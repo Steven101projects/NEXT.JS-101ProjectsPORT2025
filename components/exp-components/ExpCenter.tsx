@@ -66,7 +66,7 @@ export default function ExpCenter() {
         <button
             className="
                 px-6 py-2 rounded-xl 
-                bg-red-800 border border-transparent 
+                bg-black border border-transparent 
                 text-white cursor-pointer
                 transition-all duration-300
                 hover:bg-transparent hover:border-white
@@ -86,7 +86,7 @@ export default function ExpCenter() {
         }
         className="
             px-7 py-2 rounded-xl 
-            bg-red-800 border border-transparent 
+            bg-black border border-transparent 
             text-white cursor-pointer
             transition-all duration-300
             hover:bg-transparent hover:border-white

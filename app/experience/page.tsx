@@ -10,12 +10,12 @@ export default function Experience() {
            <Image
     src="/profile.jpg"
     alt="Profile image"
-    width={360}
-    height={360}
+    width={290}
+    height={290}
     className="
-        absolute top-8 left-[38vw] z-10
+        absolute top-8 left-[40vw] z-10
         object-cover
-        rounded-[60%_40%_55%_45%]
+        rounded-[65%_55%_65%_55%]
         shadow-2xl
     "
 />
