@@ -17,7 +17,6 @@ export default function ProjectCarousel3D() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  // slightly smaller on mobile
   const CARD_W = isSmall ? 220 : 850;
   const CARD_H = isSmall ? 300 : 450;
   const GAP = isSmall ? 20 : 40;
@@ -36,12 +35,10 @@ export default function ProjectCarousel3D() {
             gridTemplateRows: `${CARD_H}px ${CTRLS_H}px`,
             gridTemplateColumns: "1fr repeat(5,30px) 1fr",
             alignItems: "center",
-            justifyItems: "center",
-            overflow: "visible",
+            justifyItems: "center"
           }}
         >
           <main
-            id="carousel"
             className="flex items-center justify-center mx-auto relative"
             style={{
               gridRow: "1 / 2",
@@ -51,9 +48,8 @@ export default function ProjectCarousel3D() {
               transformStyle: "preserve-3d",
               perspective: isSmall ? "380px" : "600px",
               "--items": total,
-              "--middle": 3,
               "--position": position,
-              pointerEvents: "none",
+              pointerEvents: "none"
             }}
           >
             {projects.map((p, i) => (
@@ -65,14 +61,12 @@ export default function ProjectCarousel3D() {
                   position: "absolute",
                   width: `${CARD_W}px`,
                   height: `${CARD_H}px`,
-                  transformOrigin: "50% 50%",
                   "--offset": i + 1,
                   "--r": `calc(var(--position) - var(--offset))`,
-                  "--abs": `max(calc(var(--r) * -1), var(--r))`,
                   transform: `rotateY(calc(-6deg * var(--r)))
                               translateX(calc(-${CARD_W + GAP}px * var(--r)))`,
-                  zIndex: `calc((var(--position) - var(--abs)))`,
-                  pointerEvents: "auto",
+                  zIndex: `calc((var(--position) - abs(var(--r))))`,
+                  pointerEvents: "auto"
                 }}
               >
                 <div className="relative w-full h-2/3 overflow-hidden">
@@ -83,15 +77,13 @@ export default function ProjectCarousel3D() {
                   />
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-full p-5 flex justify-between items-end">
-                  <div className="max-w-[70%] text-left">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {p.title}
-                    </h3>
-                    <p className="text-gray-700 mt-1 text-sm">
-                      {p.description}
-                    </p>
-                  </div>
+                <div className="absolute bottom-0 left-0 w-full p-5">
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {p.title}
+                  </h3>
+                  <p className="text-gray-700 mt-1 text-sm">
+                    {p.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -102,67 +94,105 @@ export default function ProjectCarousel3D() {
             >
               <div
                 onClick={moveLeft}
-                className="w-1/2 h-full cursor-pointer bg-transparent hover:bg-gradient-to-r hover:from-black/10 hover:via-transparent hover:to-transparent transition-all duration-500 ease-in-out"
-              ></div>
-
+                className="w-1/2 h-full cursor-pointer"
+              />
               <div
                 onClick={moveRight}
-                className="w-1/2 h-full cursor-pointer bg-transparent hover:bg-gradient-to-l hover:from-black/10 hover:via-transparent hover:to-transparent transition-all duration-500 ease-in-out"
-              ></div>
+                className="w-1/2 h-full cursor-pointer"
+              />
             </div>
           </main>
         </div>
       </div>
 
+      {/* Modal */}
       {selected && (
         <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 p-6"
           onClick={() => setSelected(null)}
         >
           <div
-            className="bg-white rounded-xl shadow-xl p-8 max-w-3xl w-full relative"
+            className="bg-white rounded-3xl shadow-2xl p-10 md:p-14 w-full max-w-5xl relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-4 right-4 text-gray-600 hover:text-black text-xl"
               onClick={() => setSelected(null)}
+              className="absolute top-4 right-5 text-xl text-gray-600 hover:text-black"
             >
               ×
             </button>
 
-            <img
-              src={selected.image}
-              alt={selected.title}
-              className="w-full h-64 object-cover rounded-lg mb-6"
-            />
+            <div className="flex flex-col md:flex-row gap-10">
 
-            <h2 className="text-3xl font-semibold text-gray-900 mb-4">
-              {selected.title}
-            </h2>
+              {/* Left */}
+              <div className="w-full md:w-1/2">
+                <h2 className="text-3xl font-semibold mb-4 text-gray-900">
+                  {selected.title}
+                </h2>
 
-            <p className="text-gray-700 leading-relaxed mb-6">
-              {selected.description}
-            </p>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  {selected.description}
+                </p>
 
-            {selected.stack && (
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Tech Used
-                </h3>
-                <p className="text-gray-700">{selected.stack}</p>
+                <div className="bg-gray-50 rounded-2xl p-6 mb-6 border">
+                  <h3 className="text-lg font-semibold mb-3">Design</h3>
+                  <p className="text-gray-700 mb-3">
+                    {selected.design?.approach || "Coming soon"}
+                  </p>
+
+                  {selected.design?.canvaLink && (
+                    <a
+                      href={selected.design.canvaLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 border rounded-lg text-sm hover:bg-gray-100"
+                    >
+                      View Canva Design
+                    </a>
+                  )}
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 border">
+                  <h3 className="text-lg font-semibold mb-3">Documentation</h3>
+
+                  <div className="flex flex-col gap-3">
+                    {selected.documentation?.githubLink && (
+                      <a
+                        href={selected.documentation.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 border rounded-lg text-sm hover:bg-gray-100"
+                      >
+                        GitHub Repository
+                      </a>
+                    )}
+
+                    {selected.documentation?.googleDocsLink && (
+                      <a
+                        href={selected.documentation.googleDocsLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 border rounded-lg text-sm hover:bg-gray-100"
+                      >
+                        Google Docs
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-            )}
 
-            {selected.link && (
-              <a
-                href={selected.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-black text-white px-6 py-3 rounded-lg text-lg"
-              >
-                Visit Project
-              </a>
-            )}
+              {/* Right */}
+              <div className="w-full md:w-1/2">
+                <div className="w-full h-72 md:h-96 rounded-2xl overflow-hidden border shadow-sm">
+                  <img
+                    src={selected.image}
+                    alt={selected.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       )}
