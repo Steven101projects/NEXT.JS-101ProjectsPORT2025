@@ -59,7 +59,7 @@ export default function ExpCenter() {
     
     {/* Resume Button */}
     <a
-        href="/Nico_Castro_Resume.pdf"
+        href="/101ProjectsNicoCastroResume.pdf"
         target="_blank"
         rel="noopener noreferrer"
     >
