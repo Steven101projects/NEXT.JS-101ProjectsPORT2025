@@ -13,7 +13,7 @@ export default function ExpRight() {
 
             <div
                 id="Contacts"
-                className="relative right-5 text-[4vh] leading-relaxed flex flex-col items-center space-y-2 mb-6"
+                className="relative right-5 text-[4vh] leading-relaxed flex flex-col items-center space-y-2 mb-3"
             >
                 <div>
                     <p>
@@ -38,7 +38,8 @@ export default function ExpRight() {
             </div>
 
             {/* Card 1 */}
-            <div className="group w-[30vw] ml-[5vh] mt-4 perspective">
+            <div className="group w-[30vw] ml-[5vh] mt-4 perspective text-center">
+                <p className="text-3xl mb-5">My Tech Stack:</p>
                 <div className="relative h-[14vh] w-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                     <div className="absolute cursor-crosshair inset-0 bg-red-800 rounded-3xl shadow-md flex flex-col items-center justify-center backface-hidden">
                         <p className="italic text-[3vh] text-white font-semibold">
