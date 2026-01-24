@@ -132,6 +132,7 @@ export default function ProjectCarousel3D() {
 
                 <p className="text-gray-600 mb-8 leading-relaxed">
                   {selected.description}
+                  {selected.link}
                 </p>
 
                 <div className="bg-gray-50 rounded-2xl p-6 mb-6 border">

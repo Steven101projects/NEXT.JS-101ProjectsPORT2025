@@ -57,7 +57,7 @@ const projects = [
       githubLink: "https://github.com/Steven101projects/NEXT.JS-101ProjectsPORT2025",
       googleDocsLink: "https://docs.google.com/your-101projects-doc"
     },
-    link: "https://github.com/Steven101projects/NEXT.JS-101ProjectsPORT2025",
+    link: "https://101projects-nextjs.vercel.app/",
     image: "/projects-img/portfolio-preview.png"
   },
   {
@@ -80,7 +80,7 @@ const projects = [
       githubLink: "https://github.com/Steven101projects/Project04-CRAFTERIA",
       googleDocsLink: "https://docs.google.com/document/d/1iWqkfDYpC6gbEq16Bbmn3PBSPE5jTHQauVkT8z0z64c/edit?usp=sharing"
     },
-    link: "https://github.com/Steven101projects/Project04-CRAFTERIA",
+    link: "https://mern-project4-crafteriav-1-5.vercel.app/",
     image: "/projects-img/crafteria-preview.png"
   },
   {
@@ -100,7 +100,7 @@ const projects = [
       githubLink: "https://github.com/Steven101projects/Project3-Docusaurus-NicNotes",
       googleDocsLink: "https://docs.google.com/document/d/1tBNjHIHuJFxpcXrA9JY9svgnrJuUgqJBCCnHG0rwXqY/edit?usp=sharing"
     },
-    link: "https://github.com/Steven101projects/Project3-Docusaurus-NicNotes",
+    link: "https://nicnotes.netlify.app/",
     image: "/projects-img/nicnotes-preview.png"
   },
   {
@@ -117,7 +117,7 @@ const projects = [
         "GitHub repository contains the complete source code for the digital clock.",
       githubLink: "https://github.com/Steven101projects/DigitalClockJS"
     },
-    link: "https://github.com/Steven101projects/DigitalClockJS",
+    link: "https://steven101projects.github.io/DigitalClockJS/",
     image: "/projects-img/digiclock-preview.png"
   }
 ];
